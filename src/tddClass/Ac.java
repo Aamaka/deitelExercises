@@ -1,26 +1,22 @@
 package tddClass;
 
 public class Ac {
-    private boolean remote;
+    private boolean isOn;
     private int temperature;
      public Ac () {
     temperature = 16;
 }
 
     public void switchOnOff() {
-        if (!remote){
-            remote = true;
-        } else {
-            remote = false;
-        }
+         isOn = !isOn;
         }
 
     public boolean isOnOff() {
-        return remote;
+        return isOn;
     }
 
     public void increaseTemperature() {
-        if (temperature < 30){temperature = temperature + 1;}
+        if(temperature < 30){temperature ++;}
     }
 
     public int getTemperature() {

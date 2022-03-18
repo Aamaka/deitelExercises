@@ -9,7 +9,7 @@ public class CarTest {
     Car cruise ;
     @BeforeEach
     public void startWith(){
-        cruise = new ();
+        cruise = new Car();
     }
     @Test
     public void createCar(){
@@ -29,10 +29,10 @@ public class CarTest {
 
   @Test
     public void carModel(){
-        cruise.turnOn();
         cruise.setModel("Benz");
         assertEquals("Benz", cruise.getModel());
   }
+
 
 
 

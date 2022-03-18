@@ -8,6 +8,11 @@ public class Car {
 
     }
 
+    public Car() {
+        this.model = model;
+
+    }
+
     public void turnOn() {
         isOn = !isOn;
     }
@@ -24,6 +29,7 @@ public class Car {
     public String getModel() {
         return model;
     }
+
 
 
 }
