@@ -1,4 +1,4 @@
-package tddClass;
+package javaAssignment;
 
 public class Ac {
     private boolean isOn;

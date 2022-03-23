@@ -1,4 +1,4 @@
-package tddClass;
+package chapter3;
 
 public class PetrolPurchase {
 

@@ -2,9 +2,9 @@ package tddClass;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.BitSet;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class KataTest {
 
@@ -41,7 +41,7 @@ public class KataTest {
     @Test
     public void bitFlipperTest() {
         kata flipper = new kata();
-        /**int result = flipper.flip(0);
+        /*int result = flipper.flip(0);
          assertEquals(1 ,result);**/
 
         int result = flipper.flip(1);
@@ -52,21 +52,21 @@ public class KataTest {
     @Test
     public void testThat1_4CopiesIs2000() {
         kata jamb = new kata();
-     int copies =  jamb.numberOfCopies(4);
+        int copies = jamb.numberOfCopies(4);
         assertEquals(8000, copies);
     }
 
     @Test
     public void testThat5_9CopiesIs2000() {
         kata jamb = new kata();
-     int copies=   jamb.numberOfCopies(9);
+        int copies = jamb.numberOfCopies(9);
         assertEquals(16_200, copies);
     }
 
     @Test
     public void testThat10_29CopiesIs2000() {
         kata jamb = new kata();
-       int copies = jamb.numberOfCopies(29);
+        int copies = jamb.numberOfCopies(29);
         assertEquals(46_400, copies);
     }
 
@@ -76,50 +76,78 @@ public class KataTest {
         int copies = jamb.numberOfCopies(49);
         assertEquals(73_500, copies);
     }
+
     @Test
     public void testThat50_99CopiesIs2000() {
         kata jamb = new kata();
-       int copies= jamb.numberOfCopies(99);
+        int copies = jamb.numberOfCopies(99);
         assertEquals(128_700, copies);
     }
+
     @Test
     public void testThat100_199CopiesIs2000() {
         kata jamb = new kata();
-      int copies=  jamb.numberOfCopies(199);
+        int copies = jamb.numberOfCopies(199);
         assertEquals(238_800, copies);
     }
+
     @Test
     public void testThat200_499CopiesIs2000() {
         kata jamb = new kata();
-      int copies=  jamb.numberOfCopies(499);
+        int copies = jamb.numberOfCopies(499);
         assertEquals(548_900, copies);
     }
+
     @Test
     public void testThat500AndAboveCopiesIs2000() {
         kata jamb = new kata();
-       int copies= jamb.numberOfCopies(550);
+        int copies = jamb.numberOfCopies(550);
         assertEquals(550_000, copies);
 
     }
 
     @Test
-    public void testForQuotient(){
+    public void testForQuotient() {
         kata quo = new kata();
-       int result = quo.divisionOfTwoNumbers(10,2);
-        assertEquals(5,result);
+        int result = quo.divisionOfTwoNumbers(10, 2);
+        assertEquals(5, result);
     }
 
     @Test
-    public void testWhileLoop(){
-        int number = 0;
-       // int number = 1;
-        while(number < 100){
-           number = number + 2;
-            System.out.print(number+ " ");
-            //number = number + 2;
-        }
-
-
+    public void evenNumberTest() {
+        kata evenOdd = new kata();
+        evenOdd.isEven(20);
+        assertTrue(evenOdd.isEven(20));
 
     }
+
+    @Test
+    public void oddNumberTest() {
+        kata evenOdd = new kata();
+        evenOdd.isEven(19);
+        assertFalse(evenOdd.isEven(19));
+
     }
+    @Test
+    public void biggestTest(){
+        kata biggest = new kata();
+        biggest.biggest(21,77,77,9,20);
+        assertEquals(77,biggest.biggest(21,77,77,9,20));
+    }
+
+    @Test
+    public void factorsTest(){
+        kata factor = new kata();
+        int count = factor.factors(49);
+        assertEquals(3,count);
+    }
+
+    @Test
+    public void primeNumber(){
+        kata prime = new kata ();
+        prime.isPrime(3);
+        assertTrue(prime.isPrime(3));
+    }
+
+
+}
