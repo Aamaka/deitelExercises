@@ -27,4 +27,5 @@ public class Ac {
         if (temperature > 16)
         {temperature = temperature - 1;}
     }
+
 }

@@ -69,4 +69,5 @@ public class CarTest {
        assertEquals(7.4284,cruise2.getPrice());
      }
 
+
 }
