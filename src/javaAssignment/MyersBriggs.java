@@ -224,24 +224,26 @@ public class MyersBriggs {
 
 
         }
-        System.out.println("E = " + extrovertCounter);
-        System.out.println("I = " + introvertCounter);
-        System.out.println("S = " + sensitiveCounter);
-        System.out.println("N = " + intuitionCounter);
-        System.out.println("T = " + thinkerCounter);
-        System.out.println("F = " + feelerCounter);
-        System.out.println("J = " + judgingCounter);
-        System.out.println("P = " + perceptiveCounter);
+        System.out.println("Extrovert = " + extrovertCounter);
+        System.out.println("Introvert = " + introvertCounter);
+        System.out.println("Sensitive = " + sensitiveCounter);
+        System.out.println("Intuition = " + intuitionCounter);
+        System.out.println("Thinker = " + thinkerCounter);
+        System.out.println("Feeler = " + feelerCounter);
+        System.out.println("Judging = " + judgingCounter);
+        System.out.println("Perceptive = " + perceptiveCounter);
+        System.out.println();
 
-        if (extrovertCounter > introvertCounter) System.out.print("E ");
-        else if (introvertCounter > extrovertCounter) System.out.print("I ");
-         if (sensitiveCounter > intuitionCounter) System.out.print("S ");
-        else if (intuitionCounter > sensitiveCounter) System.out.print("N ");
-         if (thinkerCounter > feelerCounter) System.out.print("T ");
-        else if (feelerCounter > thinkerCounter) System.out.print("F ");
-         if (judgingCounter > perceptiveCounter) System.out.print("J ");
-        else if (perceptiveCounter > judgingCounter) System.out.print("P ");
+        if (extrovertCounter > introvertCounter) System.out.print("Extrovert ");
+        else if (introvertCounter > extrovertCounter) System.out.print("Introvert ");
+         if (sensitiveCounter > intuitionCounter) System.out.print("Sensitive ");
+        else if (intuitionCounter > sensitiveCounter) System.out.print("intuition ");
+         if (thinkerCounter > feelerCounter) System.out.print("Thinker ");
+        else if (feelerCounter > thinkerCounter) System.out.print("Feeler ");
+         if (judgingCounter > perceptiveCounter) System.out.print("Judging ");
+        else if (perceptiveCounter > judgingCounter) System.out.print("Perceptive ");
 
 
     }
 }
+
