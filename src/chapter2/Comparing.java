@@ -15,13 +15,14 @@ public class Comparing{
 
   
  int biggest = number1;
- int smallest = number1;
 
  if (number2 > biggest){ 
 biggest =number2;
 }
  if (number3 > biggest){biggest = number3;
 }
+
+       int smallest = number1;
 
  if (number2 < smallest){smallest = number2;
 }

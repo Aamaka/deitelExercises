@@ -7,13 +7,15 @@ public class ChristmasDays {
 
             switch (days) {
                 case 1 -> {
+                    System.out.println();
                     System.out.println("on the first day of christmas");
                     System.out.println("my true love sent to me");
                 }
                 case 2 -> {
                     System.out.println();
                     System.out.println("on the second day of christmas");
-                    System.out.println("my true love sent to me");
+                    System.out.println("my true love gave to me");
+
                 }
                 case 3 -> {
                     System.out.println();
@@ -24,6 +26,9 @@ public class ChristmasDays {
                     System.out.println();
                     System.out.println("on the fourth day of christmas");
                     System.out.println("my true love sent to me");
+
+
+
                 }
                 case 5 -> {
                     System.out.println();

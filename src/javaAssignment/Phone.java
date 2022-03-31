@@ -36,7 +36,7 @@ public class Phone {
                         4. Erase
                         5. Edit
                         6. Assign tone
-                        7. Send b'card
+                        7. Send b' card
                         8. Options
                         9. Speed dials
                         10. Voice tags
@@ -46,11 +46,11 @@ public class Phone {
                 switch (userInput) {
                     case 1 -> System.out.println("you made a research");
                     case 2 -> System.out.println("05667 is your service number");
-                    case 3 -> System.out.println("you have added your name... your name is Amaka");
+                    case 3 -> System.out.println("you have added your name... your name is Addiction");
                     case 4 -> System.out.println("you made an erase");
                     case 5 -> System.out.println("edit your pictures");
                     case 6 -> System.out.println("pick your preferred tone");
-                    case 7 -> System.out.println("send birthday message");
+                    case 7 -> System.out.println("send business message");
                     case 8 -> {
                         System.out.println("""
                                 1. Type of view
@@ -59,10 +59,10 @@ public class Phone {
                         userInput = input.nextInt();
                         switch (userInput) {
                             case 1 -> System.out.println("portrait");
-                            case 2 -> System.out.println("you are low on space");
+                            case 2 -> System.out.println("total space is 1024mb");
                         }
                     }
-                    case 9 -> System.out.println("how fast you dial");
+                    case 9 -> System.out.println("press 77 to add to shortcut");
                     case 10 -> System.out.println("Voice tag select");
                 }
             }
