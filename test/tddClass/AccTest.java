@@ -41,5 +41,13 @@ public class AccTest {
         babe.withdraw(600);
         assertEquals(500,babe.getBalance());
     }
-
+@Test
+    public void transferTest(){
+        Acc amaka = new Acc();
+        babe.deposit(700);
+        assertEquals(700,babe.getBalance());
+        assertEquals(0, amaka.getBalance());
+        babe.transfer("amaka" ,500);
+        assertEquals(200,babe.getBalance());
+}
 }

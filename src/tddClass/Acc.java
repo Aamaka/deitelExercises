@@ -17,5 +17,8 @@ public class Acc {
     }
 
 
+    public void transfer(String name, int amount) {
+        balance = balance - amount;
+    }
 }
 
