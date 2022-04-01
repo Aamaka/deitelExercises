@@ -72,7 +72,7 @@ public class HeartRateTest {
 
     @Test
     public void testForDateOfBirth(){
-       // myHeartRate.setDateOfBirth(3/6/2002);
+      //  myHeartRate.setDateOfBirth(3/6/2002);
         assertEquals(3/6/2002,myHeartRate.getDateOfBirth());
     }
 }

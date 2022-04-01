@@ -7,9 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AccTest {
     Acc babe ;
+    Acc amaka;
     @BeforeEach
     public void startWith(){
         babe = new Acc();
+        amaka = new Acc();
     }
 
     @Test
@@ -43,11 +45,11 @@ public class AccTest {
     }
 @Test
     public void transferTest(){
-        Acc amaka = new Acc();
         babe.deposit(700);
         assertEquals(700,babe.getBalance());
-        assertEquals(0, amaka.getBalance());
-        babe.transfer("amaka" ,500);
+        assertEquals(0, amaka.getBalanceB());
+        babe.transfer(amaka ,500);
         assertEquals(200,babe.getBalance());
+        assertEquals(500, amaka.getBalance());
 }
 }

@@ -1,8 +1,8 @@
 package tddClass;
 
 public class Acc {
-    private int balance;
-
+     int balance ;
+    int amount;
     public void deposit(int amount) {
         if(amount > 0)
         balance = balance + amount;
@@ -13,12 +13,20 @@ public class Acc {
     }
 
     public int getBalance() {
-        return balance;
+        return balance +amount;
     }
 
 
-    public void transfer(String name, int amount) {
+
+    public void transfer(Acc name, int amount) {
         balance = balance - amount;
+        name.balance+=amount;
+
+
+    }
+
+    public int getBalanceB() {
+        return balance + amount;
     }
 }
 

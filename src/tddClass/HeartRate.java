@@ -88,7 +88,7 @@ public class HeartRate {
     }
 
     public void setDateOfBirth(String month,int day, int yearOfBirth) {
-       //dateOfBirth = month+  day+  yearOfBirth;
+      // dateOfBirth = month+  day+  yearOfBirth;
     }
 }
 
