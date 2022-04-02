@@ -6,18 +6,18 @@ public class AccountsTest {
 
         Accounts tola = new Accounts("tolani akinsola", "5857585669");
         tola.deposit(1000);
-        System.out.println(tola.balance);
+        System.out.println(Accounts.balance);
 
         tola.withdrawal(5);
-        System.out.println(tola.balance);
+        System.out.println(Accounts.balance);
 
         tola.withdrawal(100);
-        System.out.println(tola.balance);
+        System.out.println(Accounts.balance);
 
         Accounts amaka = new Accounts("Amacool","3456789876");
         tola.transfer(amaka,550);
-        System.out.println(amaka.balance);
-        System.out.println(tola.balance);
+        System.out.println(Accounts.balance);
+        System.out.println(Accounts.balance);
 
         Accounts.setInterestRate(10);
 //        amaka.addInterestRate();
