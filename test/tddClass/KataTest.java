@@ -173,3 +173,4 @@ public class KataTest {
         assertEquals(363,kata.getSumFrom(scores));
     }
 }
+
