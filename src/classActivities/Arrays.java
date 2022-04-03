@@ -1,4 +1,4 @@
-package javaAssignment;
+package classActivities;
 
 public class Arrays {
     public static void main(String[] args) {

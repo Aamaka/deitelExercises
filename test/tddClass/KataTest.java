@@ -128,26 +128,44 @@ public class KataTest {
         assertFalse(evenOdd.isEven(19));
 
     }
+
     @Test
-    public void biggestTest(){
+    public void biggestTest() {
         kata biggest = new kata();
-        biggest.biggest(21,77,77,9,20);
-        assertEquals(77,biggest.biggest(21,77,77,9,20));
+        biggest.biggest(21, 77, 77, 9, 20);
+        assertEquals(77, biggest.biggest(21, 77, 77, 9, 20));
     }
 
     @Test
-    public void factorsTest(){
+    public void factorsTest() {
         kata factor = new kata();
         int count = factor.factors(49);
-        assertEquals(3,count);
+        assertEquals(3, count);
     }
 
     @Test
-    public void primeNumber(){
-        kata prime = new kata ();
+    public void primeNumber() {
+        kata prime = new kata();
         prime.isPrime(3);
         assertTrue(prime.isPrime(3));
     }
 
+    @Test
+    public void arrays() {
+        int[] scores = {14, 45, 47, 34, 42};
+        assertEquals(47, kata.getFindMaximumFrom(scores));
+    }
 
+
+    @Test
+    public void arraysForMinimum() {
+        int[] scores = {144, 45, 47, 34, 42};
+        assertEquals(34, kata.getFindMinimumFrom(scores));
+    }
+
+    @Test
+    public void arraysTestForAverage(){
+        int[] scores = {144, 45, 47, 34, 42};
+        assertEquals(62.0, kata.getFindAverageFrom(scores));
+    }
 }

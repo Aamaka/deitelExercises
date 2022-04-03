@@ -2,6 +2,33 @@ package tddClass;
 
 public class kata {
 
+    public static int getFindMaximumFrom(int[] scores) {
+        int maximum = Integer.MIN_VALUE;
+        for(int i = 0; i < scores.length; i++){
+            if(scores[i]  > maximum ){maximum = scores[i];}
+        }
+
+
+        return maximum;
+    }
+
+    public static int getFindMinimumFrom(int[] scores) {
+        int minimum = Integer.MAX_VALUE;
+        for(int i = 0; i < scores.length; i++){
+            if(scores[i]  < minimum ){minimum = scores[i];}
+        }
+        return minimum;
+    }
+
+    public static int getFindAverageFrom(int[] scores) {
+        int sum = 0;
+        for(int i = 0; i < scores.length; i++){
+           sum +=scores[i];
+        }
+
+        return sum / scores.length;
+    }
+
     public int add(int firstNumber, int secondNumber) {
         int result = firstNumber + secondNumber;
         return result;

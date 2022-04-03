@@ -1,4 +1,4 @@
-package javaAssignment;
+package classActivities;
 
 public class TicTacToes2 {
     public static void main(String[] args) {

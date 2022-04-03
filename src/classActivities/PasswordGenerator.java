@@ -1,4 +1,4 @@
-package javaAssignment;
+package classActivities;
 
 import java.security.SecureRandom;
 

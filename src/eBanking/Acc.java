@@ -1,26 +1,40 @@
 package eBanking;
 
 public class Acc {
-    private int amakaBalance;
-    private int fayBalance;
+    private int balance;
 
-    public void amakaDeposit(int amount) {
-        amakaBalance =+ amount;
+    private  final String ACCOUNT_NUMBER;
+    private  String accountName;
+    private  final String PIN;
+
+    public  Acc(String accountNumber,String firstName, String lastName, String pin){
+        ACCOUNT_NUMBER = accountNumber;
+        this.accountName = firstName +" " + lastName;
+        PIN = pin;
     }
 
-    public int getBalance1(String pin) {
-        if(pin.equals("1234"))
-        return amakaBalance;
-        return 0;
+    public int getBalance(String pin) {
+        if(pin.equals(PIN)){
+        return balance;}
+        else {
+        System.out.println("wrong pin");
+        return 0;}
+
     }
 
-    public void fayDeposit(int amount) {
-        fayBalance =+ amount;
+    public void deposit(int amount) {balance += amount;
     }
 
-    public int getBalance2(String pin) {
-        if(pin.equals("5678"))
-        return fayBalance;
-        return 0;
+    public String getAccountNumber() {
+        return ACCOUNT_NUMBER;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public void withdraw(int amount,String pin) {
+        if(pin.equals(PIN)) balance -= amount;
+
     }
 }

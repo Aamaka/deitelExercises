@@ -10,7 +10,7 @@ public class HeartRateTest {
     HeartRate myHeartRate;
     @BeforeEach
     public void startWith(){
-        myHeartRate = new HeartRate("love","Hatred",2002,2022,"march",6);
+        myHeartRate = new HeartRate("love","Hatred","2002","2022","march",6);
     }
 
     @Test
@@ -29,20 +29,20 @@ public class HeartRateTest {
 
 @Test
     public void testForYear(){
-    myHeartRate.setYear(2022);
+    myHeartRate.setYear("2022");
     assertEquals(2022,myHeartRate.getYear());
 }
 
 @Test
     public void testForYearOfBirth(){
-        myHeartRate.setBirthYear(2022);
-        assertEquals(2022,myHeartRate.getBirthYear());
+        myHeartRate.setBirthYear("2002");
+        assertEquals("2002",myHeartRate.getBirthYear());
 }
 
 @Test
     public  void getAgeOfBirth(){
-        myHeartRate.setYear(2022);
-        myHeartRate.setBirthYear(2002);
+        myHeartRate.setYear("2022");
+        myHeartRate.setBirthYear("2002");
         assertEquals(20,myHeartRate.getAge());
 }
 
@@ -66,13 +66,13 @@ public class HeartRateTest {
 
     @Test
     public  void testForDay(){
-        myHeartRate.setDay(6);
-        assertEquals(6,myHeartRate.getDay());
+        myHeartRate.setDay("6");
+        assertEquals("6",myHeartRate.getDay());
     }
 
     @Test
     public void testForDateOfBirth(){
-      //  myHeartRate.setDateOfBirth(3/6/2002);
+        myHeartRate.setDateOfBirth("march","6","2002");
         assertEquals(3/6/2002,myHeartRate.getDateOfBirth());
     }
 }
