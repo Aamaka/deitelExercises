@@ -13,9 +13,11 @@ public class kata {
     }
 
     public static int getFindMinimumFrom(int[] scores) {
-        int minimum = Integer.MAX_VALUE;
-        for(int i = 0; i < scores.length; i++){
-            if(scores[i]  < minimum ){minimum = scores[i];}
+      int minimum = Integer.MAX_VALUE;
+        for (int score : scores) {
+            if (score < minimum) {
+                minimum = score;
+            }
         }
         return minimum;
     }
@@ -27,6 +29,15 @@ public class kata {
         }
 
         return sum / scores.length;
+    }
+
+    public static int getSumFrom(int[] scores) {
+        int sum = 0;
+        for(int i = 0; i < scores.length; i++){
+            sum +=scores[i];
+        }
+        return sum;
+
     }
 
     public int add(int firstNumber, int secondNumber) {

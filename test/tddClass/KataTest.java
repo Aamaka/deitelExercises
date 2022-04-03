@@ -2,8 +2,6 @@ package tddClass;
 
 import org.junit.jupiter.api.Test;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class KataTest {
@@ -151,21 +149,27 @@ public class KataTest {
     }
 
     @Test
-    public void arrays() {
-        int[] scores = {14, 45, 47, 34, 42};
-        assertEquals(47, kata.getFindMaximumFrom(scores));
+    public void arraysForMaximum() {
+        int[] scores = {14, 45, 47, 34, 42,76,44,65,87,90};
+        assertEquals(90, kata.getFindMaximumFrom(scores));
     }
 
 
     @Test
     public void arraysForMinimum() {
-        int[] scores = {144, 45, 47, 34, 42};
-        assertEquals(34, kata.getFindMinimumFrom(scores));
+        int[] scores = {144, 45, 47, 34, 42,89,78,35,23,54};
+        assertEquals(23, kata.getFindMinimumFrom(scores));
     }
 
     @Test
     public void arraysTestForAverage(){
-        int[] scores = {144, 45, 47, 34, 42};
-        assertEquals(62.0, kata.getFindAverageFrom(scores));
+        int[] scores = {144, 45, 47, 34, 42,87,90,32,56,12};
+        assertEquals(58.0, kata.getFindAverageFrom(scores));
+    }
+
+    @Test
+    public void testForArraySum(){
+        int [] scores = {3,2,6,5,4,66,88,99,34,56};
+        assertEquals(363,kata.getSumFrom(scores));
     }
 }
