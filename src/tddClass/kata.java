@@ -23,12 +23,12 @@ public class kata {
     }
 
     public static int getFindAverageFrom(int[] scores) {
-        int sum = 0;
-        for(int i = 0; i < scores.length; i++){
-           sum +=scores[i];
-        }
+//        int sum = 0;
+//        for(int i = 0; i < scores.length; i++){
+//           sum +=scores[i];
+//        }
 
-        return sum / scores.length;
+        return getSumFrom(scores)/ scores.length;
     }
 
     public static int getSumFrom(int[] scores) {

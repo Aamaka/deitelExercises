@@ -1,5 +1,6 @@
 package tddClass;
 
+import chapter3.HeartRate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,7 @@ public class HeartRateTest {
     HeartRate myHeartRate;
     @BeforeEach
     public void startWith(){
-        myHeartRate = new HeartRate("love","Hatred","2002","2022","march",6);
+        myHeartRate = new HeartRate("love","Hatred",2002,2022,2,6);
     }
 
     @Test
@@ -29,51 +30,53 @@ public class HeartRateTest {
 
 @Test
     public void testForYear(){
-    myHeartRate.setYear("2022");
+    myHeartRate.setYear(2022);
     assertEquals(2022,myHeartRate.getYear());
 }
 
 @Test
     public void testForYearOfBirth(){
-        myHeartRate.setBirthYear("2002");
-        assertEquals("2002",myHeartRate.getBirthYear());
+        myHeartRate.setBirthYear(2002);
+        assertEquals(2002,myHeartRate.getBirthYear());
 }
 
 @Test
-    public  void getAgeOfBirth(){
-        myHeartRate.setYear("2022");
-        myHeartRate.setBirthYear("2002");
+    public  void setAgeOfBirth(){
+        myHeartRate.setYear(2022);
+        myHeartRate.setBirthYear(2002);
         assertEquals(20,myHeartRate.getAge());
 }
 
 @Test
     public  void testForMaximumHeartRate(){
-  myHeartRate.getMaximumHeartRate(20);
-  assertEquals(200,myHeartRate.getMaximumHeartRate(20));
+     myHeartRate.setYear(2022);
+     myHeartRate.setBirthYear(2002);
+  assertEquals(200,myHeartRate.getMaximumHeartRate());
 }
 
 @Test
     public void targetHeartRate(){
-        myHeartRate.getTarget();
-        assertEquals(18700,myHeartRate.getTarget());
+        assertEquals(187,myHeartRate.getTarget());
     }
 
     @Test
-    public void tstForMonth(){
-        myHeartRate.setMonth("march");
-        assertEquals("march",myHeartRate.getMonth());
+    public void testForMonth(){
+        myHeartRate.setMonth(13);
+        assertEquals(13,myHeartRate.getMonth());
     }
 
     @Test
     public  void testForDay(){
-        myHeartRate.setDay("6");
-        assertEquals("6",myHeartRate.getDay());
+        myHeartRate.setDay(6);
+        assertEquals(6,myHeartRate.getDay());
     }
 
     @Test
     public void testForDateOfBirth(){
-        myHeartRate.setDateOfBirth("march","6","2002");
-        assertEquals(3/6/2002,myHeartRate.getDateOfBirth());
+        myHeartRate.setDay(6);
+        myHeartRate.setMonth(12);
+        myHeartRate.setBirthYear(2002);
+       assertEquals("12/6/2002",myHeartRate.getDateOfBirth());
     }
 }
 
