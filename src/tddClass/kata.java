@@ -3,12 +3,10 @@ package tddClass;
 public class kata {
 
     public static int getFindMaximumFrom(int[] scores) {
-        int maximum = Integer.MIN_VALUE;
+         int maximum = Integer.MIN_VALUE;
         for(int i = 0; i < scores.length; i++){
             if(scores[i]  > maximum ){maximum = scores[i];}
         }
-
-
         return maximum;
     }
 

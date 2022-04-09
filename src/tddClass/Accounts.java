@@ -4,7 +4,7 @@ public class Accounts {
     String name = "";
     String accountNumber = "";
     static int balance = 0;
-    static int rate;
+    //static int rate;
     public static int interestRate;
     public Accounts(String name , String accountNumber){
         this.name = name;
@@ -21,19 +21,19 @@ public int addInterestRate(){
 }
 
     public void deposit(int amount) {
-        this.balance = amount;
+        balance = amount;
     }
 
     public void withdrawal(int amount) {
         if(amount < balance)
-        this.balance -= amount;
+        balance -= amount;
         if(amount > balance)
             System.out.println("insufficient balance");
         else System.out.println("transaction successful");
     }
 
     public void transfer(Accounts name,int amount) {
-        this.balance -= amount;
-        name.balance =+amount;
+        balance -= amount;
+        balance =+amount;
     }
 }
