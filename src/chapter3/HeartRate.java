@@ -9,7 +9,14 @@ public class HeartRate {
     private int month;
     private int day;
 
-    public HeartRate(String firstName, String hatred, int yearOfBirth, int year, int month, int day) {
+    public HeartRate(String firstName, String lastName, int yearOfBirth, int year, int month, int day) {
+        this.firstName = firstName;
+        this.lastName =  lastName;
+        this.birthYear = yearOfBirth;
+        this.year = year;
+        this.month = month;
+        this.day = day;
+
     }
 
     public void setFirstName(String myFirstName) {
@@ -65,45 +72,19 @@ public class HeartRate {
     public int getMonth() {
         if (month <= 12) {
             switch (month) {
-                case 1:
-                    System.out.println("January");
-                    break;
-                case 2:
-                    System.out.println("February");
-                    break;
-                case 3:
-                    System.out.println("March");
-                    break;
-                case 4:
-                    System.out.println("April");
-                    break;
-                case 5:
-                    System.out.println("May");
-                    break;
-                case 6:
-                    System.out.println("June");
-                    break;
-                case 7:
-                    System.out.println("July");
-                    break;
-                case 8:
-                    System.out.println("August");
-                    break;
-                case 9:
-                    System.out.println("September");
-                    break;
-                case 10:
-                    System.out.println("October");
-                    break;
-                case 11:
-                    System.out.println("November");
-                    break;
-                case 12:
-                    System.out.println("December");
-                    break;
-                default:
-                    System.out.println("enter only numbers from 1 to 12 ");
-                    break;
+                case 1 -> System.out.println("January");
+                case 2 -> System.out.println("February");
+                case 3 -> System.out.println("March");
+                case 4 -> System.out.println("April");
+                case 5 -> System.out.println("May");
+                case 6 -> System.out.println("June");
+                case 7 -> System.out.println("July");
+                case 8 -> System.out.println("August");
+                case 9 -> System.out.println("September");
+                case 10 -> System.out.println("October");
+                case 11 -> System.out.println("November");
+                case 12 -> System.out.println("December");
+                default -> System.out.println("enter only numbers from 1 to 12 ");
             }
 
             return month;

@@ -2,15 +2,21 @@ package chapter3;
 
 public class Clock {
 
-    private int hour;
+    private static int hour;
     private int minutes;
     private int seconds;
 
-    public void setHour(int hour) {
+    public Clock(int hour, int minutes, int seconds) {
+        Clock.hour = hour;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
+    public  static void setHour(int hour) {
         if(hour <= 23)
-      this.hour = hour;
+      Clock.hour = hour;
         else {
-            this.hour = 0;
+            Clock.hour = 0;
         }
     }
 

@@ -1,4 +1,4 @@
-package tddClass;
+package chapter3Tests;
 
 import personalFun.MethodsForUse;
 import personalFun.MyPC;

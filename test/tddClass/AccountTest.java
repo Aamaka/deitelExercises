@@ -51,9 +51,9 @@ public class AccountTest {
     @Test
     public void withdrawalMore(){
         Account amakaAccount = new Account();
-        amakaAccount.deposit(0);
-        amakaAccount.withdrawal(600);
-        assertEquals(0,amakaAccount.getBalance());
+        amakaAccount.deposit(1000);
+        amakaAccount.withdrawal(1600);
+        assertEquals(1000,amakaAccount.getBalance());
 
     }
 

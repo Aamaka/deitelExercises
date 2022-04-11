@@ -10,7 +10,7 @@ public class ClockTest {
     Clock time;
     @BeforeEach
     public void startWith(){
-        time = new Clock();
+        time = new Clock(22,12,4);
     }
 
     @Test

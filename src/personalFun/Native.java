@@ -1,4 +1,4 @@
-package tddClass;
+package personalFun;
 
 import javaAssignment.Ac;
 

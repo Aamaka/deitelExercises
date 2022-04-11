@@ -10,14 +10,21 @@ public class studentGrade {
         int  bGradeCount = 0;
         int  cGradeCount = 0;
         int  dGradeCount = 0;
+        int sum = 0;
+        double average;
 
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("how many students?: ");
+         int numberOfStudents = input.nextInt();
+
+        for (int i = 1; i <= numberOfStudents; i++) {
             System.out.println("enter student name: ");
             input.next();
 
+            System.out.println("enter student score: ");
+            int scores = input.nextInt();
+
             System.out.println("enter student grade: ");
             String studentGrade = input.next().toUpperCase();
-
 
             switch (studentGrade) {
                 case "A" -> aGradeCount++;
@@ -26,12 +33,18 @@ public class studentGrade {
                 case "D" -> dGradeCount++;
                 default -> System.out.println("input only letters from A-D");
             }
+            sum += scores;
         }
-            System.out.println(aGradeCount+ "grade A");
+
+           average = (double) sum / numberOfStudents;
+
+
+        System.out.println(aGradeCount+ "grade A");
             System.out.println(bGradeCount+ "grade B");
             System.out.println(cGradeCount+ "grade C");
             System.out.println(dGradeCount+ "grade D");
-
+            System.out.println("total score is : " +sum);
+            System.out.println("the average is : " + average);
 
 
     }

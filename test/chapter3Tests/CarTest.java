@@ -1,4 +1,4 @@
-package tddClass;
+package chapter3Tests;
 
 import chapter3.Car;
 import org.junit.jupiter.api.BeforeEach;
