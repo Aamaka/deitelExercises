@@ -1,4 +1,4 @@
-package chapter6;
+package chapter5.chapter6;
 
 public class FloorAndCeil {
     private  double max;

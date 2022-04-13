@@ -10,7 +10,7 @@ public class BankTest {
     private Bank firstBank;
     @BeforeEach
     public void startWith(){
-        firstBank = new Bank("FirstName",10);
+        firstBank = new Bank("FirstBank",10);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class BankTest {
     }
 
     @Test
-    public  void register_checkForCustomerTest(){
+    public  void registerCheckForCustomerTest(){
         firstBank.register("joy","peace","1245");
         firstBank.register("joi","peace","1745");
         firstBank.register("joy","blade","1245");
@@ -39,4 +39,44 @@ public class BankTest {
         assertEquals("joys pace",account.getAccountName());
         assertEquals("4",account.getAccountNumber());
     }
+    @Test
+    public void bankCanDepositMoneyTest(){
+        firstBank.register("joy","peace","1245");
+        firstBank.deposit(1200, "1");
+        firstBank.deposit(1800, "1");
+        Acc acc = firstBank.findAccount(1);
+        assertEquals(3000,acc.getBalance("1245"));
+
+    }
+    @Test
+    public  void bankCanWithdrawMoney(){
+        firstBank.register("joy","peace","1245");
+        firstBank.deposit(1200, "1");
+        firstBank.withdraw(100, "1", "1245");
+
+        Acc acc = firstBank.findAccount(1);
+        assertEquals(1100,acc.getBalance("1245"));
+    }
+
+    @Test
+    public void bankCanTransferMoneyTest(){
+        firstBank.register("joy","peace","1245");
+        firstBank.register("joi","peace","1745");
+
+        firstBank.deposit(12000,"1");
+
+        Acc acc = firstBank.findAccount(1);
+        assertEquals(12000,acc.getBalance("1245"));
+
+        firstBank.transfer(200,"1","2","1245");
+
+
+         acc = firstBank.findAccount(1);
+        assertEquals(11800,acc.getBalance("1245"));
+
+
+        acc  = firstBank.findAccount(2);
+        assertEquals(200,acc.getBalance("1745"));
+    }
+
 }

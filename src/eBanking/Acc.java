@@ -34,7 +34,18 @@ public class Acc {
     }
 
     public void withdraw(int amount,String pin) {
-        if(pin.equals(PIN)) balance -= amount;
+        if(pin.equals(PIN))
+            if(amount > balance){amount = 0;}
+            balance -= amount;
 
     }
+    @Override
+    public String toString(){
+        return String.format("""
+                Account Name : %s
+                Account Number : %s
+                Balance : %d
+                """, accountName , ACCOUNT_NUMBER,balance);
+    }
+
 }

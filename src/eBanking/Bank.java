@@ -18,11 +18,12 @@ public class Bank {
         return accounts.length;
     }
 
-    public void register(String firstName, String lastName, String pin) {
+    public Acc register(String firstName, String lastName, String pin) {
         String accountNumber = (numberOfCustomer+1)+"";
         Acc account = new Acc( accountNumber,firstName,lastName,pin);
         accounts[numberOfCustomer] = account;
         numberOfCustomer++;
+        return account;
     }
 
     public int getNumberOfCustomers() {
@@ -36,5 +37,21 @@ public class Bank {
     }
 
 
+    public void deposit(int amount, String accountNumber) {
+        Acc account = findAccount(Integer.parseInt(accountNumber));
+        account.deposit(amount);
+    }
 
+    public void withdraw(int amount, String accountNumber, String pin) {
+        Acc account = findAccount(Integer.parseInt(accountNumber));
+        account.withdraw(amount,pin);
+
+    }
+
+    public void transfer(int amount, String from, String to, String senderPin) {
+        Acc senderAccount = findAccount(Integer.parseInt(from));
+        Acc receiverAccount =findAccount(Integer.parseInt(to));
+        senderAccount.withdraw(amount,senderPin);
+        receiverAccount.deposit(amount);
+    }
 }

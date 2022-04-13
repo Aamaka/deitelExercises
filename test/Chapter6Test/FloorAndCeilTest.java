@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter6.FloorAndCeil;
+import chapter5.chapter6.FloorAndCeil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

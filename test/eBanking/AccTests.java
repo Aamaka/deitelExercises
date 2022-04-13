@@ -47,7 +47,7 @@ public class AccTests {
         amaka.withdraw(6000,"1234");
         fay.withdraw(2000,"5678");
 
-        assertEquals(0,amaka.getBalance("1234"));
+        assertEquals(5000,amaka.getBalance("1234"));
         assertEquals(5000,fay.getBalance("5678"));
     }
 
