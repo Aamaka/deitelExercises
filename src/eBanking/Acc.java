@@ -36,7 +36,7 @@ public class Acc {
     public void withdraw(int amount,String pin) {
         if(pin.equals(PIN))
             if(amount > balance){amount = 0;}
-            balance -= amount;
+        balance -= amount;
 
     }
     @Override

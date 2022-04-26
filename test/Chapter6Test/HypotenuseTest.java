@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter5.chapter6.Hypotenuse;
+import chapter6.Hypotenuse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

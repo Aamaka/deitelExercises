@@ -19,4 +19,8 @@ public class GasMileage {
     public  int getGallon(){
         return gallon;
     }
+
+    public float getMilePerGallon() {
+        return (float) mile / gallon;
+    }
 }

@@ -6,8 +6,8 @@ public class ArraysOfNumbers {
         for(int i = 0; i < babes.length; i++) {
             babes[i] = i + 1;
         }
-        for(int i = 0; i < babes.length; i++){
-            System.out.print(babes[i]+" ");
+        for(int j = 0; j < babes.length; j++){
+            System.out.print(babes[j]+" ");
         }
     }
 }

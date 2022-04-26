@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter5.chapter6.LeapYear;
+import chapter6.LeapYear;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

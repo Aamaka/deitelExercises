@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter5.chapter6.Division;
+import chapter6.Division;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

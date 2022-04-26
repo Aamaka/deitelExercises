@@ -6,8 +6,7 @@ import eBanking.Bank;
 import java.util.Scanner;
 
 public class AccountMain {
-    private static Scanner scanner = new Scanner(System.in);
-   private  static  Bank bank = new Bank("Zubank",4);
+   private  static  Bank bank = new Bank("firstBank",4);
     public static void main(String[] args) {
         runApp();
 
@@ -16,6 +15,7 @@ public class AccountMain {
     }
 
     private static void runApp() {
+        Scanner scanner = new Scanner(System.in);
         String prompt = """
                 Welcome to ZuBAnk,
                 press softly
@@ -32,38 +32,42 @@ public class AccountMain {
             case "1" -> createAccount();
              case "2" -> deposit();
              case "3" -> withDraw();
-//            case 4 -> transfer();
-//            case 5 -> checkBalance();
-//            case 6 -> exit();
+              case "4" -> transfer();
+             case "5" -> checkBalance();
+            case "6" -> exit();
             default -> runApp();
         }
 
     }
 
+
+
     private static void createAccount() {
+        Scanner newScanner = new Scanner(System.in);
         System.out.println("enter first name: ");
-        String firstName = scanner.nextLine();
-        scanner.next();
+        String firstName = newScanner.nextLine();
+        System.out.println(firstName);
+
         System.out.println("enter last name");
-        String lastName = scanner.nextLine();
-        scanner.next();
+        String lastName = newScanner.nextLine();
+        System.out.println(lastName);
+
         System.out.println("enter pin: ");
-        String pin = scanner.nextLine();
-        scanner.next();
+        String pin = newScanner.nextLine();
+
         Acc savedAcc = bank.register(firstName,lastName,pin);
         System.out.println(savedAcc);
         runApp();
 
     }
     public static void deposit(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("which account: ");
         String accountNumber = scanner.nextLine();
-        scanner.next();
         Acc acc = bank.findAccount(Integer.parseInt(accountNumber));
-        System.out.println("the account name is"+acc.getAccountName());
+        System.out.println("the account name is "+acc.getAccountName());
         System.out.println("how much");
         int amount = scanner.nextInt();
-        scanner.next();
         bank.deposit(amount,accountNumber);
 
         System.out.println();
@@ -73,6 +77,7 @@ public class AccountMain {
     }
 
     private static void withDraw(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("which account");
         String accountNumber = scanner.nextLine();
         System.out.println("pin: ");
@@ -81,13 +86,50 @@ public class AccountMain {
         int amount = scanner.nextInt();
         bank.withdraw(amount,accountNumber,pin);
 
-        System.out.println("successful!!!");
         Acc acc = bank.findAccount(Integer.parseInt(accountNumber));
         System.out.println();
+        System.out.println("successful!!!");
         System.out.println("your new balance is "+acc.getBalance(pin));
         System.out.println();
-        scanner.next();
         runApp();
     }
 
+    public static void transfer(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter your account number");
+        String senderAccountNumber = scanner.nextLine();
+        System.out.println("enter receiver account number");
+        String receiverAccountNumber = scanner.nextLine();
+        System.out.println("pin: ");
+        String pin = scanner.next();
+        System.out.println("how much: ");
+        int amount = scanner.nextInt();
+        bank.transfer(amount,senderAccountNumber,receiverAccountNumber,"pin");
+
+        Acc acc = bank.findAccount(Integer.parseInt(senderAccountNumber));
+        System.out.println();
+        System.out.println("successful!!!");
+        System.out.println("your new balance is "+acc.getBalance(pin));
+        System.out.println();
+        runApp();
+
+    }
+
+    private static void checkBalance() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter your account number: ");
+        String accountNumber = scanner.nextLine();
+        System.out.println("enter your pin: ");
+        String pin = scanner.nextLine();
+        Acc acc = bank.findAccount(Integer.parseInt(accountNumber));
+        System.out.println("your balance is "+ acc.getBalance(pin));
+
+        System.out.println();
+        runApp();
+    }
+
+    private  static  void exit(){
+        System.out.println("Thank you for banking with us");
+        System.exit(0);
+    }
 }

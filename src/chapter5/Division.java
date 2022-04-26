@@ -13,4 +13,5 @@ public class Division {
     public int getAnswer() {
         return sum;
     }
+
 }

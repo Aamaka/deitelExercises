@@ -40,13 +40,13 @@ public class PetrolPurchaseTest {
    @Test
     public void percentageDiscount(){
        myPetrol.setPercentageDiscount(2);
-       assertEquals( 65_900.0,myPetrol.getPercentageDiscount());
+       assertEquals( 60_100.0,myPetrol.getPercentageDiscount());
    }
 
    @Test
     public void purchase(){
       myPetrol.getPurchaseAmount();
-       assertEquals( 1_645.5,myPetrol.getPurchaseAmount());
+       assertEquals( 1_502.0,myPetrol.getPurchaseAmount());
    }
 
 }

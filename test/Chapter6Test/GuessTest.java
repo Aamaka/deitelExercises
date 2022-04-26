@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter5.chapter6.Guess;
+import chapter6.Guess;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

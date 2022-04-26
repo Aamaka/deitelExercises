@@ -1,6 +1,6 @@
 package Chapter6Test;
 
-import chapter5.chapter6.Multiple;
+import chapter6.Multiple;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
