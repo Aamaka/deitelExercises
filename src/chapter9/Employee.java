@@ -14,6 +14,7 @@ public class Employee {
         name = firstName + " " + lastName;
         this.id = id;
         this.salary = salary;
+        this.dateOfBirth = dateOfBirth;
 
     }
     public void setDateOfBirth(int day, int month, int year){
@@ -43,18 +44,11 @@ public class Employee {
         return name;
     }
 
-    public void setDiscount(double discount) {
-        this.discount = discount;
-    }
-
-    public double getDiscount() {
-        return discount;
-    }
     public int CalculateSalaryPerYear(int numberOfMonth) {
         return getSalary() * numberOfMonth;
     }
-    public double getRaise(){
-        return  (getDiscount() / 0.01 )* getSalary() ;
+    public double getRaise(int increment){
+        return   getSalary()  + increment;
     }
 
 }
