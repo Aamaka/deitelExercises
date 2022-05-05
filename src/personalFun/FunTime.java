@@ -1,4 +1,4 @@
-package chapter3Tests;
+package personalFun;
 
 import java.util.Scanner;
 

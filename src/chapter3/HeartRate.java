@@ -62,7 +62,7 @@ public class HeartRate {
     }
 
     public int getTarget() {
-        return 85 * (220 -(year - birthYear))/ 100;
+        return 85 * getMaximumHeartRate() / 100;
     }
 
     public void setMonth(int month) {
