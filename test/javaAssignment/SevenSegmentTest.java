@@ -6,7 +6,7 @@ public class SevenSegmentTest {
     @Test
     public void arrayIsCreated(){
         SevenSegment segment = new SevenSegment();
-        segment.printSegmentDisplay("01100001");
+        segment.printSegmentDisplay("11110011");
         segment.printSegment();
     }
 }

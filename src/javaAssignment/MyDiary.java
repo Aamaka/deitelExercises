@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MyDiary {
     private String name;
-    private String passWord;
+    private final String passWord;
     private ArrayList<MyEntry> entries;
     private boolean isLock;
 
