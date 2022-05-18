@@ -8,6 +8,8 @@ public class MyDiary {
     private ArrayList<MyEntry> entries;
     private boolean isLock;
 
+    final int INVALID_NUMBER = -15;
+
     public MyDiary(String name, String passWord) {
         this.name = name;
         this.passWord = passWord;
@@ -15,7 +17,7 @@ public class MyDiary {
     }
 
     public void createEntry(String date, String title, String body) {
-        MyEntry entry = new MyEntry(date, title, body);
+        MyEntry entry = new MyEntry(date,title, body);
         entries.add(entry);
     }
 
@@ -39,7 +41,7 @@ public class MyDiary {
                 return i + 1;
             }
         }
-        return -22;
+        return INVALID_NUMBER;
     }
     public void deleteEntryByTitle(String title, String pass) {
         if(pass.equals(passWord))

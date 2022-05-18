@@ -1,4 +1,4 @@
-package abstactsAndInterFace;
+package abstactsAndInterface;
 
 public abstract class Vehicle {
 

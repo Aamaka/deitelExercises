@@ -1,4 +1,4 @@
-package abstactsAndInterFace;
+package abstactsAndInterface;
 
 public class Motor extends Car{
     @Override
