@@ -172,5 +172,11 @@ public class KataTest {
         int [] scores = {3,2,6,5,4,66,88,99,34,56};
         assertEquals(363,kata.getSumFrom(scores));
     }
+
+    @Test
+    public void printArray(){
+        int [] print = new int[20];
+        assertEquals(0,kata.getPrint(print));
+    }
 }
 

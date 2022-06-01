@@ -1,6 +1,6 @@
 package tddClass;
 
-import javaAssignment.Ac;
+import javaAssignmentTest.Ac;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -3,10 +3,10 @@ package chapter3;
 public class Car {
     private boolean isOn;
     private String model;
-    private String year;
+    private int year;
     private double price;
 
-    public Car(String model,String year,double price){
+    public Car(String model,int year,double price){
      this.model = model;
      this.year = year;
      this.price = price;
@@ -31,11 +31,11 @@ public class Car {
     }
 
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
@@ -58,6 +58,12 @@ public class Car {
 
     public double getPrice() {
         return price;
+    }
+
+    public String toString(){
+        return "price :" + price+ "\n"+
+                "Model: " + model+ "\n"+
+                "year: " + year;
     }
 }
 

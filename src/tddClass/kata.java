@@ -38,6 +38,8 @@ public class kata {
 
     }
 
+
+
     public int add(int firstNumber, int secondNumber) {
         int result = firstNumber + secondNumber;
         return result;
@@ -149,5 +151,11 @@ public class kata {
     return false;
     }
 
-
+    public static int getPrint(int[] print) {
+        int output = 0;
+        for (int i = 0; i < print.length; i++) {
+            output = print[i];
+        }
+        return output ;
+    }
 }

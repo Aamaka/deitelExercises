@@ -43,8 +43,13 @@ public class StackTest {
     @Test
     public void pushX_popX_elementShouldBeTest(){
         stack.push(12);
+        stack.push(12);
+        stack.push(12);
+        stack.push(12);
+        stack.push(13);
+        stack.push(12);
         int element = stack.pop();
-        assertEquals(12,element);
+        assertEquals(13,element);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package tddClass;
 
-import javaAssignment.Television;
+import javaAssignmentTest.Television;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -104,4 +104,16 @@ public class HeartRate {
     public int getDay(){
         return  day;
     }
+
+    @Override
+    public String toString() {
+        return "HeartRate{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                ", birthYear=" + birthYear +
+                ", month=" + month +
+                ", day=" + day +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package eStore;
 
 public enum ProductCategory {
-    ELECTRONIC ,GROCERIES, UTENSILS, CLOTHING,
+    ELECTRONIC, GROCERIES, UTENSILS, CLOTHING
+
 }

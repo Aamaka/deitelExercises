@@ -1,7 +1,7 @@
 package tddClass;
 
 
-import javaAssignment.Ac;
+import javaAssignmentTest.Ac;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import personalFun.Native;

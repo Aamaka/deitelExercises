@@ -3,16 +3,20 @@ package dsa;
 public class Stack {
 
  private int numberOfElement ;
-    private int[] elements = new int[5];
+    private final int[] elements = new int[5];
 
     public boolean isEmpty() {
-        if (numberOfElement == 0) return  true;
-        return false;
+        return numberOfElement == 0;
     }
 
     public void push(int element) {
-        elements[numberOfElement] = element;
-        numberOfElement++;
+        try {
+            elements[numberOfElement] = element;
+            numberOfElement++;
+        }catch (ArrayIndexOutOfBoundsException i){
+            System.out.println("it cant go above 5");
+        }
+
     }
 
     public int pop() {
@@ -22,7 +26,6 @@ public class Stack {
     }
 
     public int peek() {
-
         return elements[numberOfElement - 1];
     }
 }
