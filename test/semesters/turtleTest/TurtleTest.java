@@ -1,5 +1,6 @@
-package turtleTest;
+package semesters.turtleTest;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import turtle.Position;
@@ -21,113 +22,113 @@ public class TurtleTest {
 
     @Test
     public void createTurtle(){
-        assertNotNull(turtle);
+        Assertions.assertNotNull(turtle);
     }
 
     @Test
     public void testThatPenIsUpByDefault(){
-        assertFalse(turtle.isPenDown());
+        Assertions.assertFalse(turtle.isPenDown());
     }
 
     @Test
     public void testThatPenIsDown(){
          turtle.penDown();
-        assertTrue(turtle.isPenDown());
+        Assertions.assertTrue(turtle.isPenDown());
     }
 
     @Test
     public void testThatPenIsUp(){
         turtle.penDown();
-        assertTrue(turtle.isPenDown());
+        Assertions.assertTrue(turtle.isPenDown());
         turtle.penUp();
-        assertFalse(turtle.isPenDown());
+        Assertions.assertFalse(turtle.isPenDown());
     }
 
     @Test
     public  void turtleFacesEastByDefaultTest(){
         turtle.penDown();
-        assertTrue(turtle.isPenDown());
-        assertSame(EAST,turtle.getCurrentDirection());
+        Assertions.assertTrue(turtle.isPenDown());
+        Assertions.assertSame(EAST,turtle.getCurrentDirection());
     }
 
     @Test
     public void turtleCanTurnRightFromEastTest(){
         turtle.turnRight();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
     }
 
     @Test
     public void turtleCanTurnRightFromSouthTest(){
         turtle.turnRight();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
     }
 
 
     @Test
     public void turtleCanFaceNorth(){
         turtle.turnRight();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
     }
 
     @Test
     public void turtleCanFaceEast(){
         turtle.turnRight();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
         turtle.turnRight();
-        assertSame(EAST,turtle.getCurrentDirection());
+        Assertions.assertSame(EAST,turtle.getCurrentDirection());
     }
 
     @Test
     public void turtleCanTurnLeftFromEast(){
         turtle.turnLeft();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
     }
 
     @Test
     public void testCanTurnLeftFromNorth(){
         turtle.turnLeft();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
     }
 
     @Test
     public void testThatTurtleCanTurnLeftFromWest(){
         turtle.turnLeft();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
     }
 
     @Test
     public void testThatTurtleCanTurnLeftFromSouth(){
         turtle.turnLeft();
-        assertSame(NORTH, turtle.getCurrentDirection());
+        Assertions.assertSame(NORTH, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(SOUTH, turtle.getCurrentDirection());
+        Assertions.assertSame(SOUTH, turtle.getCurrentDirection());
         turtle.turnLeft();
-        assertSame(EAST, turtle.getCurrentDirection());
+        Assertions.assertSame(EAST, turtle.getCurrentDirection());
     }
 
     @Test
     public void turtleCanGoForward(){
         turtle.penDown();
         turtle.moveForward(5, pad);
-        assertEquals(new Position(0,4), turtle.getCurrentPosition());
+        Assertions.assertEquals(new Position(0,4), turtle.getCurrentPosition());
     }
 
     @Test
@@ -136,7 +137,7 @@ public class TurtleTest {
        turtle.moveForward(5, pad);
         turtle.turnRight();
         turtle.moveForward(5, pad);
-        assertEquals(new Position(4,4), turtle.getCurrentPosition());
+        Assertions.assertEquals(new Position(4,4), turtle.getCurrentPosition());
     }
 
     @Test
@@ -148,8 +149,8 @@ public class TurtleTest {
         turtle.moveForward(2, pad);
         turtle.turnRight();
         turtle.moveForward(4, pad);
-        assertSame(WEST, turtle.getCurrentDirection());
-        assertEquals(new Position(7,3),turtle.getCurrentPosition());
+        Assertions.assertSame(WEST, turtle.getCurrentDirection());
+        Assertions.assertEquals(new Position(7,3),turtle.getCurrentPosition());
     }
 
     @Test
@@ -159,7 +160,7 @@ public class TurtleTest {
         turtle.moveForward(5, pad);
         String expected = "* * * * * \n     \n     \n     \n     \n";
 
-        assertEquals(expected,pad.toString());
+        Assertions.assertEquals(expected,pad.toString());
 
     }
 }

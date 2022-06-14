@@ -1,5 +1,7 @@
 package tic_tac_toe;
 
+import Tictactoe.GameBoard;
+
 import java.util.Scanner;
 
 public class Hmm {
@@ -69,11 +71,7 @@ public class Hmm {
     }
 
     private static void printingBoard(char[][] board) {
-        System.out.println(board[0][0] + "|" + board[0][1] + "|" + board[0][2]);
-        System.out.println("-+-+-");
-        System.out.println(board[1][0] + "|" + board[1][1] + "|" + board[1][2]);
-        System.out.println("-+-+-");
-        System.out.println(board[2][0] + "|" + board[2][1] + "|" + board[2][2]);
+        GameBoard.duplicates(board);
     }
 
     public static void updatedBoard(int position, int player, char[][] board) {

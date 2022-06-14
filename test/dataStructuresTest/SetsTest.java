@@ -1,8 +1,8 @@
-package turtleTest;
+package dataStructuresTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import turtle.Sets;
+import dataStructures.Sets;
 
 import static org.junit.jupiter.api.Assertions.*;
 

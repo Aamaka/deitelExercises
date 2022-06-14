@@ -17,6 +17,6 @@ public class Extreme {
     }
 
     public int getSum() {
-        return getLargest() + getSmallest();
+        return largest + smallest;
     }
 }

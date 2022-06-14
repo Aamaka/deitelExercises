@@ -1,7 +1,8 @@
 package myTurtleTest;
 
-import myTurtle.MyDirection;
 import myTurtle.MyTurtle;
+import myTurtle.NotePad;
+import myTurtle.Positions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,9 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyTurtleTest {
     private MyTurtle turtle;
+    NotePad pad;
     @BeforeEach
     public void setUp(){
         turtle = new MyTurtle();
+        pad = new NotePad(5,5);
     }
 
     @Test
@@ -106,9 +109,99 @@ public class MyTurtleTest {
     }
 
     @Test
-    public void turtleCanGoForward(){
-
+    public void turtleCanGoForwardFromEast(){
+        turtle.move(5, pad);
+        assertEquals(new Positions(0, 4), turtle.getCurrentPosition());
+    }
+    @Test
+    public void movingToSouth(){
+        turtle.move(5, pad);
+        assertEquals(new Positions(0, 4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(SOUTH,turtle.getCurrentDirection());
+        turtle.move(5, pad);
+        assertEquals(new Positions(4, 4), turtle.getCurrentPosition());
+    }
+    @Test
+    public void  movingToWest(){
+        turtle.move(5, pad);
+        assertEquals(new Positions(0, 4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(SOUTH,turtle.getCurrentDirection());
+        turtle.move(5, pad);
+        assertEquals(new Positions(4, 4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(WEST,turtle.getCurrentDirection());
+        turtle.move(3, pad);
+        assertEquals(new Positions(4, 2), turtle.getCurrentPosition());
+    }
+    @Test
+    public void movingToNorth(){
+        turtle.move(5, pad);
+        assertEquals(new Positions(0, 4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(SOUTH,turtle.getCurrentDirection());
+        turtle.move(5, pad);
+        assertEquals(new Positions(4, 4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(WEST,turtle.getCurrentDirection());
+        turtle.move(3, pad);
+        assertEquals(new Positions(4, 2), turtle.getCurrentPosition());
+        turtle.turnRight();
+        turtle.move(5, pad);
+        assertEquals(new Positions(0, 2), turtle.getCurrentPosition());
+    }
+    @Test
+    public void testThatTurtleCanWriteToEast(){
+        turtle.penDown();
+        turtle.move(5, pad);
+        assertEquals(new Positions(0,4), turtle.getCurrentPosition());
+        String expected = """
+                * * * * *\s
+                         \s
+                         \s
+                         \s
+                         \s
+                """;
+        assertEquals(expected,pad.toString());
+    }
+    @Test
+    public void testThatTurtleCanWriteTowardSouth(){
+        turtle.penDown();
+        turtle.move(5, pad);
+        assertEquals(new Positions(0,4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        turtle.move(5, pad);
+        assertEquals(new Positions(4,4), turtle.getCurrentPosition());
+        String expected = """
+                * * * * *\s
+                        *\s
+                        *\s
+                        *\s
+                        *\s
+                """;
+        assertEquals(expected,pad.toString());
     }
 
+    @Test
+    public void testThatTurtleCanWriteTowardWest(){
+        turtle.penDown();
+        turtle.move(5, pad);
+        assertEquals(new Positions(0,4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        turtle.move(5, pad);
+        assertEquals(new Positions(4,4), turtle.getCurrentPosition());
+        turtle.turnRight();
+        turtle.move(5, pad);
+        assertEquals(new Positions(4,0), turtle.getCurrentPosition());
+        String expected = """
+                * * * * *\s
+                        *\s
+                        *\s
+                        *\s
+                * * * * *\s
+                """;
+        assertEquals(expected,pad.toString());
+    }
 
 }

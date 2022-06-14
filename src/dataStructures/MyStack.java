@@ -1,4 +1,4 @@
-package turtle;
+package dataStructures;
 
 public class MyStack {
 

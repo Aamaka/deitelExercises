@@ -1,8 +1,8 @@
-package turtleTest;
+package dataStructuresTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import turtle.Queue;
+import dataStructures.Queue;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,52 +24,53 @@ public class QueueTest {
 
     @Test
     public void testThatElementCanBeAdded(){
-        queue.add(90);
-        assertEquals(1,queue.getSize());
+        queue.enqueue(90);
+
     }
 
     @Test
     public void testThatQueueIsNotEEmpty(){
-        queue.add(90);
+        queue.enqueue(90);
         assertFalse(queue.isEmpty());
     }
 
     @Test
     public void testThatQueueThatIncrease(){
-        queue.add(90);
-        queue.add(7);
-        queue.add(8);
-        queue.add(9);
-        assertEquals(4, queue.getSize());
+        queue.enqueue(90);
+        queue.enqueue(7);
+        queue.enqueue(8);
+        queue.enqueue(9);
+        queue.dequeue();
+        assertEquals(7, queue.peek());
     }
 
     @Test
     public void testThatQueueHasAFixedLength(){
-        queue.add(90);
-        queue.add(7);
-        queue.add(8);
-        queue.add(9);
-        queue.add(9);
-        queue.add(9);
-        assertEquals(5,queue.getSize());
+        queue.enqueue(90);
+        queue.enqueue(7);
+        queue.enqueue(8);
+        queue.enqueue(9);
+        queue.enqueue(9);
+        queue.enqueue(9);
+        assertEquals(90,queue.peek());
+
     }
 
     @Test
     public void testThatQueueCanBeRemoved(){
-        queue.add(50);
-        queue.add(34);
-        queue.add(32);
-        queue.remove();
+        queue.enqueue(50);
+        queue.enqueue(34);
+        queue.enqueue(32);
+        queue.dequeue();
         assertEquals(34,queue.peek());
-        assertEquals(2,queue.getSize());
+
     }
     @Test
     public void testThatPeekWorks(){
-        queue.add(50);
-        queue.add(34);
-        queue.add(32);
+        queue.enqueue(50);
+        queue.enqueue(34);
+        queue.enqueue(32);
         assertEquals(50,queue.peek());
-        assertEquals(3,queue.getSize());
     }
 
 

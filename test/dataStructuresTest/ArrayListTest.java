@@ -1,5 +1,6 @@
-package turtleTest;
+package dataStructuresTest;
 
+import dataStructures.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -7,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayListTest {
 
-    private turtle.ArrayList arrays;
+    private ArrayList arrays;
     @BeforeEach
     public void startWith(){
-        arrays = new turtle.ArrayList();
+        arrays = new ArrayList();
     }
 
     @Test

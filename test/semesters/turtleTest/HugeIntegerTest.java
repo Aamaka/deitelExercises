@@ -1,5 +1,6 @@
-package turtleTest;
+package semesters.turtleTest;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tic_tac_toe.HugeInteger;
@@ -14,33 +15,33 @@ public class HugeIntegerTest {
         }
         @Test
         public void hugeIntegerExistTest(){
-            assertNotNull(huge);
+            Assertions.assertNotNull(huge);
         }
         @Test
         public void hugeIntegerCanParseTest(){
             huge.parse("8674839209849376834945678987654321234567");
             int[] result = huge.getArrayElements();
-            assertEquals(8,result[0]);
-            assertEquals(6,result[1]);
-            assertEquals(7,result[2]);
-            assertEquals(4,result[3]);
-            assertEquals(5,result[37]);
-            assertEquals(6,result[38]);
-            assertEquals(7,result[39]);
-            assertEquals(40, huge.getSize());
+            Assertions.assertEquals(8,result[0]);
+            Assertions.assertEquals(6,result[1]);
+            Assertions.assertEquals(7,result[2]);
+            Assertions.assertEquals(4,result[3]);
+            Assertions.assertEquals(5,result[37]);
+            Assertions.assertEquals(6,result[38]);
+            Assertions.assertEquals(7,result[39]);
+            Assertions.assertEquals(40, huge.getSize());
         }
         @Test
         public void hugeIntegerCanBeConvertedToStringTest(){
             huge.parse("8674839209849376834945678987654321234567");
             int[] result = huge.getArrayElements();
-            assertEquals(6,result[1]);
-            assertEquals(0,result[8]);
-            assertEquals(8,result[10]);
-            assertEquals(3,result[13]);
-            assertEquals(7,result[14]);
-            assertEquals(6,result[15]);
-            assertEquals(7,result[39]);
-            assertEquals("8674839209849376834945678987654321234567", huge.toString());
+            Assertions.assertEquals(6,result[1]);
+            Assertions.assertEquals(0,result[8]);
+            Assertions.assertEquals(8,result[10]);
+            Assertions.assertEquals(3,result[13]);
+            Assertions.assertEquals(7,result[14]);
+            Assertions.assertEquals(6,result[15]);
+            Assertions.assertEquals(7,result[39]);
+            Assertions.assertEquals("8674839209849376834945678987654321234567", huge.toString());
         }
         @Test
         public void twoObjectsOfHugeIntegerCanBeAddedTest(){
@@ -49,7 +50,7 @@ public class HugeIntegerTest {
             HugeInteger hugeInteger2 = new HugeInteger(40);
             hugeInteger2.parse("1234500000000000000000000000000000000000");
             String result = HugeInteger.add(hugeInteger1,hugeInteger2);
-            assertEquals("4908840000000000000000000000000000000000", result);
+            Assertions.assertEquals("4908840000000000000000000000000000000000", result);
         }
 
         @Test
@@ -59,7 +60,7 @@ public class HugeIntegerTest {
             HugeInteger hugeInteger2 = new HugeInteger(40);
             hugeInteger2.parse("1234");
             String result = HugeInteger.subtract(hugeInteger1,hugeInteger2);
-            assertEquals("1877100000000000000000000000000000000000", result);
+            Assertions.assertEquals("1877100000000000000000000000000000000000", result);
         }
         @Test
         public void twoObjectsOfHugeIntegersAreEqualTest(){
@@ -67,7 +68,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("3111112345609876543210000000000000000021");
             HugeInteger hugeInteger2 = new HugeInteger(40);
             hugeInteger2.parse("3111112345609876543210000000000000000021");
-            assertTrue(hugeInteger1.isEqualTo(hugeInteger2));
+            Assertions.assertTrue(hugeInteger1.isEqualTo(hugeInteger2));
         }
 
         @Test
@@ -76,7 +77,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("3111112345609876534567000000000000000044");
             HugeInteger hugeInteger2 = new HugeInteger(40);
             hugeInteger2.parse("3111112345609876543709810000000000000071");
-            assertTrue(hugeInteger1.isNotEqualTo(hugeInteger2));
+            Assertions.assertTrue(hugeInteger1.isNotEqualTo(hugeInteger2));
         }
 
         @Test
@@ -85,7 +86,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("1829364738294338290364782");
             HugeInteger hugeInteger2 = new HugeInteger(36);
             hugeInteger2.parse("311111234560987654370981000000000000");
-            assertTrue(hugeInteger2.isGreaterThan(hugeInteger1));
+            Assertions.assertTrue(hugeInteger2.isGreaterThan(hugeInteger1));
         }
 
         @Test
@@ -94,7 +95,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("143792759087543985746");
             HugeInteger hugeInteger2 = new HugeInteger(38);
             hugeInteger2.parse("21345675463891827364532819847362512192");
-            assertTrue(hugeInteger1.isLessThan(hugeInteger2));
+            Assertions.assertTrue(hugeInteger1.isLessThan(hugeInteger2));
         }
 
         @Test
@@ -103,7 +104,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("4560983897537898654609765");
             HugeInteger hugeInteger2 = new HugeInteger(36);
             hugeInteger2.parse("311111234560987654370981000000000001");
-            assertTrue(hugeInteger2.isGreaterThanOrEqualTo(hugeInteger1));
+            Assertions.assertTrue(hugeInteger2.isGreaterThanOrEqualTo(hugeInteger1));
         }
 
         @Test
@@ -112,7 +113,7 @@ public class HugeIntegerTest {
             hugeInteger1.parse("4560983897537898654609765");
             HugeInteger hugeInteger2 = new HugeInteger(36);
             hugeInteger2.parse("311111234560987654370981000000000001");
-            assertTrue(hugeInteger1.isLessThanOrEqualTo(hugeInteger2));
+            Assertions.assertTrue(hugeInteger1.isLessThanOrEqualTo(hugeInteger2));
         }
     }
 
