@@ -14,7 +14,7 @@ public class ChristmasDays {
                 case 2 -> {
                     System.out.println();
                     System.out.println("on the second day of christmas");
-                    System.out.println("my true love gave to me");
+                    System.out.println("my true love sent to me");
 
                 }
                 case 3 -> {

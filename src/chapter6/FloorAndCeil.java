@@ -5,6 +5,7 @@ public class FloorAndCeil {
     private double min;
 
     public void setFloor(double num1, double num2, double num3, double num4, double num5) {
+
         max = num1;
         if(num2 > max) max = num2;
         if(num3 > max) max = num3;
