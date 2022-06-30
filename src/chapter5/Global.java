@@ -22,8 +22,6 @@ public class Global {
 
     private static void questionFive() {
         System.out.println("""
-                
-                *   Previous
                                 
                 Question 5:
                                 
@@ -42,10 +40,6 @@ public class Global {
             case "a", "c", "d" -> failedCounter();
 
             case "b" -> passedCounter();
-            case"*" -> {
-                questionFour();
-                questionFive();
-            }
 
             default -> questionFive();
         }
