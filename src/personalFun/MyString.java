@@ -1,7 +1,5 @@
 package personalFun;
 
-import java.awt.*;
-
 public class MyString {
 
     private int number ;
