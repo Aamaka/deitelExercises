@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class ConvertToInteger {
     public static void main(String[] args) {
-
+        romanToInt("CCC");
     }
 
-    public int romanToInt(String input){
+    public static int romanToInt(String input){
 
         Map<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
