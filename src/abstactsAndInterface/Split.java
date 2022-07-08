@@ -1,5 +1,6 @@
 package abstactsAndInterface;
 
+
 public class Split {
     public static void main(String[] args) {
         char[] charArray = {'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y'};
@@ -23,8 +24,6 @@ public class Split {
         }
 
         System.out.println(s2);
-
-
 
     }
 }
