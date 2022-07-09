@@ -45,7 +45,7 @@ public class LivingThings {
         this.respiratory = respiratory;
     }
 
-    public String getNutrition() {
+    public  String getNutrition() {
         return nutrition;
     }
 
