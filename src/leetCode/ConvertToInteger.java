@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ConvertToInteger {
     public static void main(String[] args) {
-        romanToInt("CCC");
+        System.out.println(romanToInt("CCC"));
     }
 
     public static int romanToInt(String input){
