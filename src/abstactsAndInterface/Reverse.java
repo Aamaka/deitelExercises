@@ -14,7 +14,6 @@ public class Reverse {
     public static  void reverse(){
         collectInput();
         String in = scanner.nextLine();
-
         for (int i = in.length() - 1; i >= 0 ; i--) {
             System.out.print(in.charAt(i));
         }
