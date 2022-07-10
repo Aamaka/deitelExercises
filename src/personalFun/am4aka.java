@@ -1,14 +1,11 @@
 package personalFun;
 
-import java.util.HashMap;
-
 public class am4aka {
     public static void main(String[] args) {
-        String Amaka = "lla";
-        String amaka = "jit";
+        String make = "lla";
 
-        System.out.println(amaka);
-        System.out.println(Amaka);
+        System.out.println(make);
+        System.out.println(make);
         for (int i = 0; i <= 6; i++) {
             String _AccountValue = "cnjncfj";
 
