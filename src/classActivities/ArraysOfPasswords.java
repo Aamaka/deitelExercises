@@ -7,7 +7,7 @@ public class ArraysOfPasswords {
 
 
         String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        String  lowerCase = "abcdefghijklmnopqrstuvwxyz";
         String numbers = "123456890";
         String combinedPassword = upperCase + lowerCase +numbers;
         int length = 12;
