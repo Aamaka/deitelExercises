@@ -4,8 +4,7 @@ public class LivingThings {
     private String movement;
     private String digestion;
     private String excrete;
-    private String
-            respiratory;
+    private String respiratory;
     private String nutrition;
     private String growth;
     private String reproduction;
