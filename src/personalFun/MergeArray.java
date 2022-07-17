@@ -21,5 +21,5 @@ public class MergeArray {
         Arrays.sort(newArray);
         System.out.println(Arrays.toString(newArray));
     }
-}
 
+}
