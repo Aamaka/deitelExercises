@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class MergeArray {
     public static void main(String[] args) {
+
         int[] array = {1,3,4,6};
         int[] arr = {2,5,7};
 
