@@ -44,7 +44,11 @@ public class SinglyLinkedList<T> {
 
     public void  insert(T data){
         Node<T> newNode = new Node<>(data);
-
+        if(head == null){
+            head = newNode;
+            size++;
+            return;
+        }
         Node<T> current = head;
         while (current.next() != null){
             current = current.next();
@@ -88,8 +92,18 @@ public class SinglyLinkedList<T> {
     }
 
     public void delete(T data){
+        if(head == null){
+            throw  new IllegalArgumentException("Cannot delete from an empty list");
+        }
+        if(head.next() == null){
+            head = null;
+            return;
+        }
+
         Node<T> current = head;
         Node<T> previous = head;
+
+
 
         while (current.data() != data && current.next() != null){
             previous = current;
@@ -99,15 +113,23 @@ public class SinglyLinkedList<T> {
             throw new IllegalArgumentException(String.format("Data %d not found", data));
         }
         previous.setNext(current.next());
+        size--;
     }
 
-    public void printList(){
+    @Override
+    public String toString(){
         Node<T> current = head;
+        StringBuilder stringBuilder = new StringBuilder();
 
         while (current != null){
-            System.out.println(current.data() + "-->");
+            if (current.next() == null){
+                stringBuilder.append(current.data());
+            }else {
+                stringBuilder.append(current.data()).append(" --> ");
+            }
             current = current.next();
         }
+        return stringBuilder.toString();
     }
 
     public int size (){
