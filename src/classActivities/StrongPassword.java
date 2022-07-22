@@ -1,6 +1,9 @@
 package classActivities;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StrongPassword {
     public static void main(String[] args) {
         String s = "a";
@@ -11,6 +14,12 @@ public class StrongPassword {
     }
 
     private static int returnMininumCharacterToMakeStrongPassword(String s, int n) {
+        Pattern digit = Pattern.compile("\\d");
+        Pattern upper = Pattern.compile("[A-Z]");
+        Pattern lower = Pattern.compile("[a-z]");
+        Pattern special = Pattern.compile("\\W");
+//
+//        Matcher digit1 = Pattern.matches();
         int result = 0;
 
         //for upperCase
@@ -38,5 +47,5 @@ public class StrongPassword {
         }
 
         return result;
-    }
+   }
 }
