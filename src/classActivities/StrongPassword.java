@@ -1,13 +1,11 @@
 package classActivities;
 
-
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StrongPassword {
     public static void main(String[] args) {
-        String s = "a";
-        int n = 1;
+        String s = "6yA";
+        int n = 3;
 
         int result = returnMininumCharacterToMakeStrongPassword(s,  n);
         System.out.println(result);

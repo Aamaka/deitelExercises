@@ -127,8 +127,7 @@ public class loops {
         }
     }
 
-    static void demoMethod(int xIn)
-    {
+    static void demoMethod(int xIn) {
         xIn = 25;
         System.out.println(xIn);
     }
