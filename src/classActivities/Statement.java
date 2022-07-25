@@ -2,6 +2,7 @@ package classActivities;
 import java.security.SecureRandom;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.IntUnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -59,5 +60,10 @@ public class Statement {
         int product1 = IntStream.rangeClosed(1, 5)
                 .reduce(2, (acc, el) -> acc * el);
         System.out.println(product1);
+
+
+
+        int element1 = 3;
+        IntUnaryOperator unaryOperator = x -> x * element1;
     }
 }
