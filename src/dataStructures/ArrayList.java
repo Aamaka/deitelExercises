@@ -29,6 +29,8 @@ public class ArrayList {
     public void add(int index, int element){
         if(numberOfThingsAdded >= arr.length) {
             arr = new int[arr.length * 2];
+            System.arraycopy(arr, 0,arr,0, arr.length* 2);
+
         }
         arr[index] = element;
         numberOfThingsAdded++;

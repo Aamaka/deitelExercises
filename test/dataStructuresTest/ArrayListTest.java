@@ -92,9 +92,13 @@ public class ArrayListTest {
         arrays.add(6);
         arrays.add(7);
         arrays.add(5);
-        arrays.add(4);
-        assertEquals(4,arrays.size());
-        assertEquals(5,arrays.get(2) );
+        arrays.add(14);
+        arrays.add(41);
+        arrays.add(22);
+        arrays.add(42);
+        arrays.add(49);
+        assertEquals(8,arrays.size());
+        assertEquals(22,arrays.get(6) );
    }
 
    @Test
