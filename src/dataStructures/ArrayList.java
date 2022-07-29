@@ -3,7 +3,6 @@ package dataStructures;
 public class ArrayList {
         int numberOfThingsAdded;
         boolean isEmpty;
-
         int[] arr = new int[5];
 
     public boolean isEmpty() {
@@ -11,7 +10,6 @@ public class ArrayList {
 
         return isEmpty;
     }
-
 
     public void add(int element) {
         if(element >= arr.length){
